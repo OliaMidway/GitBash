@@ -1,0 +1,84 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+- pwd
+
+2) Создать папку
+- mkdir file1
+
+3) Зайти в папку
+- cd file1
+
+4) Создать 3 папки
+- mkdir qa1 qa2 qa3
+
+5) Зайти в любоую папку
+- cd qa1
+
+6) Создать 5 файлов (3 txt, 2 json)
+- touch file1.txt file2.txt file3.txt file4.json file5.json
+
+7) Создать 3 папки
+- mkdir folder1 folder2 folder3
+
+8) Вывести список содержимого папки
+- ls -la
+
+9) + Открыть любой txt файл
+- vim file1.txt
+
+10) + написать туда что-нибудь, любой текст.
+- i "Text for home work of GitBash"
+
+11) + сохранить и выйти.
+- Esc :wq
+
+12) Выйти из папки на уровень выше
+- cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+- mv {file1.txt,file2.txt} folder3
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+- cp folder3/{file1.txt,file2.txt} folder2
+
+15) Найти файл по имени
+- find . -name file3.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+- tail -f file3.txt
+- grep -i hello file3.txt
+
+17) вывести несколько первых строк из текстового файла
+- head -3 file3.txt
+
+18) вывести несколько последних строк из текстового файла
+- tail -4 file3.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+- less file3.txt
+- поиск по содержимому через /
+- выйти Q
+
+20) вывести дату и время
+- date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl 'http://162.55.220.72:5005/terminal-hw-request'
+curl 'http://162.55.220.72:5005/get_method?name=(Olga)&age=(32)'
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+cd file1
+mkdir qa1 qa2 qa3
+cd qa1
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir folder1 folder2 folder3
+ls -la
+mv {file1.txt,file2.txt} folder3
