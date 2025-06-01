@@ -84,4 +84,4 @@ Exit with Q
 
 20) Show date and time
 
-date
+- date
